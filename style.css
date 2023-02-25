@@ -18,14 +18,14 @@ a {
     -webkit-backdrop-filter: blur(20px);
 }
 #nav-start {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
 }
 #nav-start ul {
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border-radius: 5px;
 }
 #nav-start ul li:hover {
@@ -96,7 +96,6 @@ mark {
     background-color: rgba(30, 30, 30, 0.1);
     border-radius: 12px;
 }
-
 @media (max-width: 768px) {
     .container_action_btn {
         flex-direction: column;
