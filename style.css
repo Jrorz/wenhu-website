@@ -18,7 +18,7 @@ a {
     -webkit-backdrop-filter: blur(20px);
 }
 #nav-start {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
 }
@@ -103,6 +103,12 @@ mark {
         align-items: center;
     }
     #nav-start {
-        width: 75%;
+        width: 70%;
+    }
+    #nav-top-more {
+        margin-inline-start: 10px;
+    }
+    #nav-top-get {
+        margin-inline-end: 10px;
     }
 }
