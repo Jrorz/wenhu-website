@@ -18,29 +18,54 @@
             margin: 0;
             padding: 0;
         }
+        a {
+            text-decoration: none;
+        }
+        #nav {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
     </style>
 </head>
 <body>
-
 <nav class="py-2 bg-light border-bottom">
-    <div class="container d-flex flex-wrap">
-        <ul class="nav me-auto">
-            <li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page">首页</a></li>
-            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">特性</a></li>
-            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">帮助</a></li>
-            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">动态</a></li>
-            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">关于</a></li>
-            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">博客</a></li>
-        </ul>
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0">
-            <input type="search" class="form-control" placeholder="搜索..." aria-label="Search">
-        </form>
-    </div>
+        <div class="container d-flex flex-wrap">
+            <ul class="nav me-auto">
+                <li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page">首页</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">特性</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">帮助</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">动态</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">关于</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">博客</a></li>
+                <li class="nav-item"><a href="#" class="nav-link link-dark px-2">小伙伴们</a></li>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        捐赠支持
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">微信</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">支付宝</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">QQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0">
+                <input type="search" class="form-control" placeholder="搜索..." aria-label="Search">
+            </form>
+        </div>
 </nav>
 <div class="progress" style="height: 25px; margin-inline: -5px">
-    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:9%; font-size: 15px; line-height: 16px">官网构建进度：3%</div>
+    <div class="progress-bar progress-bar-striped progress-bar-animated"
+         style="width:18%; font-size: 15px; line-height: 16px; padding-inline: 10px">官网构建进度：3%
+    </div>
 </div>
-<header class="py-3 border-bottom">
+<div class="container-fluid text-center bg-light text-muted" style="height: 30px">
+    <span style="line-height: 30px; font-size: 18px">✨如你所见，上方进度条表明目前网页还是预览版，好在我们正在完善这一切，最终成品可能会存在差异，感谢理解与期待</span>
+</div>
+<header class="py-3 border-bottom navbar sticky-top" id="nav">
     <div class="container d-flex flex-wrap">
         <a href="#" class="d-flex align-items-center me-lg-auto text-dark text-decoration-none">
             <span class="fs-4">文乎</span>
@@ -48,25 +73,101 @@
         <button type="button" class="btn btn-primary">获取</button>
     </div>
 </header>
-<div class="container-fluid bg text-center">
+<div class="container-fluid bg text-center" style="margin-block: 30px">
     <img src="/asset/logo.png" class="mx-auto d-block" alt="logo" style="width: 30%">
     <h1 class="display-1">文乎</h1>
     <br>
-    <h3 class="display-6">更<mark></mark>的宝典第三方客户端</h3>
+    <h3 class="display-6">更
+        <mark></mark>
+        的宝典第三方客户端
+    </h3>
     <br>
     <button type="button" class="btn btn-primary btn-lg me-3">了解更多</button>
 </div>
+<footer class="container-fluid bg-light text-center text-muted">
+    <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
+        <div class="me-5 d-none d-lg-block">
+            <span>文乎借助温和的灵魂与真正的❤️构建才得以实现。</span>
+        </div>
+    </section>
+    <section>
+        <div class="container text-center text-md-start mt-5">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        鸣谢
+                    </h6>
+                    <p>
+                        文乎作为
+                        <a class="text-reset fw-bold" href="https://m.duwenz.com/app/zuowen.html">作文宝典</a>
+                        的第三方客户端，本身服务基于作文宝典父级网站
+                        <a class="text-reset fw-bold" href="https://www.duwenz.com">读文斋</a>
+                        ，在此感谢其开发者秦铁霖先生。
+                        <br>
+                        同时，同时感谢项目开发过程中提供帮助的所有人。
+                    </p>
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        导航
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">获取文乎</a>
+                    </p>
+                    <p>
+                        <a href="/privacy" class="text-reset">隐私策略</a>
+                    </p>
+                    <p>
+                        <a href="/terms" class="text-reset">用户协议</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">捐赠支持</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        友情链接
+                    </h6>
+                    <p>
+                        <a href="https://www.duwenz.com" class="text-reset">读文斋</a>
+                    </p>
+                    <p>
+                        <a href="https://www.duwenz.com/zuowen" class="text-reset">作文宝典</a>
+                    </p>
+                    <p>
+                        <a href="https://m.duwenz.com/app/zuowen.html" class="text-reset">宝典官方 App</a>
+                    </p>
+                    <p>
+                        <a href="https://github.com/MultiWolf" class="text-reset">开发者</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">联系开发者</h6>
+                    <p>文乎是开发者用爱发电开发的作品，并没有责任解决你的问题，请在联系开发者时带有礼貌。</p>
+                    <p>Email：realjeffreyxiao@outlook.com</p>
+                    <p>QQ：845182580</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        Copyright © 2021-2023
+        <a class="text-reset fw-bold" href="https://github.com/MultiWolf">Fleey</a>
+        , All rights reserved.
+    </div>
+</footer>
 <script>
     mark()
-    //获取progress-bar进度，并设置文字
     let progress = document.querySelector(".progress-bar");
     let progressWidth = progress.style.width;
     progress.innerHTML = "官网构建进度：" + progressWidth;
+
     function mark() {
         let mark = document.querySelector("mark");
         let strArray = ["舒适", "简洁", "轻量", "快速", "丰富", "优雅", "美观", "强大"];
         let i = 0;
         markChange(strArray[i]);
+
         function markChange(str) {
             let timer = setInterval(function () {
                 mark.innerHTML = str.substring(0, mark.innerHTML.length + 1);
