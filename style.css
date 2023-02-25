@@ -103,4 +103,7 @@ mark {
         justify-content: space-evenly;
         align-items: center;
     }
+    #nav-start {
+        width: 75%;
+    }
 }
