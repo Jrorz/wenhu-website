@@ -37,6 +37,9 @@
         </form>
     </div>
 </nav>
+<div class="progress" style="height: 25px; margin-inline: -3px">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:9%; font-size: 16px; line-height: 16px">官网构建进度：3%</div>
+</div>
 <header class="py-3 border-bottom">
     <div class="container d-flex flex-wrap">
         <a href="#" class="d-flex align-items-center me-lg-auto text-dark text-decoration-none">
@@ -55,6 +58,10 @@
 </div>
 <script>
     mark()
+    //获取progress-bar进度，并设置文字
+    let progress = document.querySelector(".progress-bar");
+    let progressWidth = progress.style.width;
+    progress.innerHTML = "官网构建进度：" + progressWidth;
     function mark() {
         let mark = document.querySelector("mark");
         let strArray = ["舒适", "简洁", "轻量", "快速", "丰富", "优雅", "美观", "强大"];
