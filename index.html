@@ -59,7 +59,7 @@
 </nav>
 <div class="progress" style="height: 25px; margin-inline: -5px">
     <div class="progress-bar progress-bar-striped progress-bar-animated"
-         style="width:18%; font-size: 15px; line-height: 16px; padding-inline: 10px">官网构建进度：3%
+         style="width:21%; font-size: 15px; line-height: 16px;">
     </div>
 </div>
 <div class="container-fluid text-center bg-light text-muted" style="height: 30px">
@@ -73,7 +73,7 @@
         <button type="button" class="btn btn-primary">获取</button>
     </div>
 </header>
-<div class="container-fluid bg text-center" style="margin-block: 30px">
+<div class="container-fluid bg text-center" style="margin-block: 50px; min-height: 200px">
     <img src="/asset/logo.png" class="mx-auto d-block" alt="logo" style="width: 30%">
     <h1 class="display-1">文乎</h1>
     <br>
@@ -86,13 +86,12 @@
 </div>
 <footer class="container-fluid bg-light text-center text-muted">
     <section class="d-flex justify-content-center justify-content-lg-between p-3 border-bottom">
-        <div class="me-5 d-none d-lg-block">
+        <div class="container text-center text-md-start mt-1">
             <span>文乎借助温和的灵魂与真正的❤️构建才得以实现。</span>
         </div>
     </section>
-    <section>
-        <div class="container text-center text-md-start mt-5">
-            <div class="row mt-3">
+        <div class="container-fluid text-center text-md-start mt-3">
+            <div class="row mt-1">
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <h6 class="text-uppercase fw-bold mb-4">
                         鸣谢
@@ -149,18 +148,24 @@
                 </div>
             </div>
         </div>
-    </section>
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    <div class="container-fluid text-center">
         Copyright © 2021-2023
         <a class="text-reset fw-bold" href="https://github.com/MultiWolf">Fleey</a>
         , All rights reserved.
+        <br>
+        <a class="text-reset fw-bold" href="https://beian.miit.gov.cn">湘ICP备2022017526号</a>
     </div>
 </footer>
 <script>
-    mark()
-    let progress = document.querySelector(".progress-bar");
-    let progressWidth = progress.style.width;
-    progress.innerHTML = "官网构建进度：" + progressWidth;
+    mark(); progress()
+    function progress() {
+        let progress = document.querySelector(".progress-bar");
+        let progressWidth = progress.style.width;
+        progress.innerHTML = "构建进度：" + progressWidth;
+        if (progressWidth === "100%") {
+            clearInterval(timer);
+        }
+    }
 
     function mark() {
         let mark = document.querySelector("mark");
