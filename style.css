@@ -17,6 +17,23 @@ a {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
+#nav-start {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+#nav-start ul {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 5px;
+}
+#nav-start ul li:hover {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 5px;
+}
 .container_info {
     background-position: center center;
     background-size: cover;
@@ -70,6 +87,17 @@ a {
     align-items: center;
     display: flex;
 }
+mark {
+    background-color: #f5f7ff;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+#nav-top-more:hover {
+    background-color: rgba(30, 30, 30, 0.08);
+    border-radius: 12px;
+}
+
 @media (max-width: 768px) {
     .container_action_btn {
         flex-direction: column;
