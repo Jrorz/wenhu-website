@@ -14,7 +14,6 @@
     <div class="container d-flex flex-wrap">
         <ul class="nav me-auto">
             <li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page">首页</a></li>
-            <li class="nav-item"><a href="#" class="nav-link link-dark px-2">特性</a></li>
             <li class="nav-item"><a href="#" class="nav-link link-dark px-2">帮助</a></li>
             <li class="nav-item"><a href="#" class="nav-link link-dark px-2">动态</a></li>
             <li class="nav-item"><a href="#" class="nav-link link-dark px-2">关于</a></li>
@@ -31,16 +30,12 @@
                         <hr class="dropdown-divider">
                     </li>
                     <li><a class="dropdown-item" href="#">支付宝</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">QQ</a></li>
                 </ul>
             </li>
         </ul>
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0">
+        <!--<form class="col-12 col-lg-auto mb-3 mb-lg-0">
             <input type="search" class="form-control" placeholder="搜索..." aria-label="Search">
-        </form>
+        </form>-->
     </div>
 </nav>
 <div class="progress" style="height: 25px; margin-inline: -5px">
@@ -49,19 +44,20 @@
     </div>
 </div>
 <div class="container-fluid text-center bg-light text-muted" style="height: 50px">
-    <span style="line-height: 50px; font-size: 18px">✨如你所见，上方进度条表明目前网页还是预览版，好在我们正在完善这一切，最终成品可能会存在差异，感谢理解与期待</span>
+    <marquee behavior="behavior" scrollamount="25" style="line-height: 50px; font-size: 18px">✨如你所见，上方进度条表明目前网页还是预览版，好在我们正在完善这一切，最终成品可能会存在差异，感谢理解与期待</marquee>
 </div>
 <header class="py-3 border-bottom navbar sticky-top" id="nav">
     <div class="container d-flex flex-wrap">
         <a href="#" class="d-flex align-items-center me-lg-auto text-dark text-decoration-none">
             <span class="fs-4">文乎</span>
+            <h1 class="badge bg-primary">测试</h1>
         </a>
         <button type="button" class="btn btn-primary">获取</button>
     </div>
 </header>
 <div class="container_info">
     <div class="container-fluid bg text-center">
-        <img src="/asset/logo.png" class="mx-auto d-block" alt="logo" style="width: 30%">
+        <img src="/asset/logo.png" id="logo" class="mx-auto d-block" alt="logo" style="width: 30%">
         <h1 class="display-1">文乎</h1>
         <br>
         <h3 class="display-6">更
@@ -69,17 +65,22 @@
             的宝典第三方客户端
         </h3>
         <br>
-        <button type="button" class="btn btn-primary btn-lg me-3" style="width: 180px; height: 56px; font-size: 25px">了解更多</button>
-        <button type="button" class="btn btn-success btn-lg ms-3" style="width: 180px; height: 56px; font-size: 25px">最新动态</button>
+        <div class="container_action_btn" style="min-height: 180px">
+        <button type="button" id="btn_getMore" class="btn btn-warning btn-lg text-white" style="width: 200px; height: 56px; font-size: 25px"><a href="#banner-title" style="color: unset">了解更多</a> </button>
+        <button type="button" id="btn_getApk" class="btn btn-primary btn-lg" style="width: 200px; height: 56px; font-size: 25px">立即获取 </button>
+        <button type="button" id="btn_getNews" class="btn btn-success btn-lg" style="width: 200px; height: 56px; font-size: 25px">最新动态</button>
+        </div>
     </div>
 </div>
 <!--banner-->
-<div class="banner_bg">
+<div id="banner-bg" class="text-center">
     <div class="banner" id="anim">
         <img id="rela-left" class="screenshot-left" alt="首页" src="/asset/screenshot/1.jpg">
         <img id="rela-middle" class="screenshot-middle" alt="探索" src="/asset/screenshot/2.jpg">
         <img id="rela-right" class="screenshot-right" alt="消息" src="/asset/screenshot/3.jpg">
     </div>
+    <h5 class="display-5" id="banner-title">现代化</h5>
+    <p style="font-size: 23px">原生开发的基础上提供更现代的设计</p>
 </div>
 <!--footer-->
 <footer class="container-fluid bg-light text-center text-muted" style="margin-top: 50px; padding-bottom: 20px">
@@ -157,7 +158,6 @@
 <script>
     mark();
     progress();
-
     function progress() {
         let progress = document.querySelector(".progress-bar");
         let progressWidth = progress.style.width;
@@ -169,7 +169,7 @@
 
     function mark() {
         let mark = document.querySelector("mark");
-        let strArray = ["舒适", "简洁", "轻量", "快速", "丰富", "优雅", "美观", "强大"];
+        let strArray = ["舒适", "简洁", "现代", "轻量", "快速", "丰富", "优雅", "美观", "强大"];
         let i = 0;
         markChange(strArray[i]);
 
