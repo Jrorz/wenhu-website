@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+#nav {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.container_info {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./asset/background.png);
+}
+
+.banner {
+    position: relative;
+    margin: auto;
+    max-width: 780px;
+    padding-top: 12vh;
+}
+
+.screenshot-left {
+    position: absolute;
+    width: auto;
+    max-width: 500px;
+    max-height: 60vh;
+    bottom: 15px;
+    left: 0;
+    box-shadow: 0 6px 26px rgba(0, 0, 0, .1);
+}
+
+.screenshot-middle {
+    position: relative;
+    width: auto;
+    max-width: 500px;
+    max-height: 70vh;
+    z-index: 2;
+    box-shadow: 0 6px 26px rgba(0, 0, 0, .1);
+}
+
+.screenshot-right {
+    position: absolute;
+    width: auto;
+    max-width: 500px;
+    max-height: 60vh;
+    bottom: 15px;
+    right: 0;
+    box-shadow: 0 6px 26px rgba(0, 0, 0, .1);
+}
+
+.banner_bg {
+    position: relative;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .container-fluid {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
