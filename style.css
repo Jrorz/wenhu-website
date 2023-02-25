@@ -14,16 +14,16 @@ a {
 
 #nav {
     background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 #nav-start {
     background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
 }
 #nav-start ul {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 5px;
@@ -32,7 +32,6 @@ a {
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-radius: 5px;
 }
 .container_info {
     background-position: center center;
@@ -94,7 +93,7 @@ mark {
 }
 
 #nav-top-more:hover {
-    background-color: rgba(30, 30, 30, 0.08);
+    background-color: rgba(30, 30, 30, 0.1);
     border-radius: 12px;
 }
 
