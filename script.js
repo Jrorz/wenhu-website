@@ -1,3 +1,11 @@
+function view() {
+    let btnGetMore = document.querySelector("#btn_getMore");
+    btnGetMore.onclick = function () {
+        let bannerTitle = document.querySelector("#banner-title");
+        bannerTitle.scrollIntoView();
+    }
+}
+
 function progress() {
     let progress = document.querySelector(".progress-bar");
     let progressWidth = progress.style.width;
