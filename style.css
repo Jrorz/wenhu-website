@@ -47,6 +47,12 @@ a {
     padding-top: 12vh;
 }
 
+.section-title {
+    background-color: #f5f7ff;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
 .screenshot-left {
     position: absolute;
     width: auto;

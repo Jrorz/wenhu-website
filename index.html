@@ -5,14 +5,16 @@
     <link rel="icon" href="/asset/logo.png" type="image/x-icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="文乎-文人学士 风云际乎">
+    <meta name="keywords" content="文乎,作文宝典,读文斋,Fleey,作文宝典App,文人学士,风云际乎">
+    <meta name="author" content="Fleey">
+    <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
     <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-<!--<form class="col-12 col-lg-auto mb-3 mb-lg-0">
-    <input type="search" class="form-control" placeholder="搜索..." aria-label="Search">
-</form>-->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="nav-start" aria-labelledby="offcanvasExampleLabel">
     <div class="b-example-divider"></div>
     <div class="d-flex flex-column flex-shrink-0 p-3" style="height: 100%">
@@ -83,11 +85,21 @@
         </ul>
     </div>
 </div>
-
-<div class="container-fluid text-center bg-light text-muted" style="height: 50px">
-    <marquee behavior="behavior" scrollamount="15" style="line-height: 50px; font-size: 18px">
-        ✨如你所见，下方进度条表明目前网页还是预览版，好在我们正在完善这一切，最终成品可能会存在差异，感谢理解与期待
-    </marquee>
+<div class="modal fade" id="downloadModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="downloadModal-Title"></h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" id="downloadModal-Close"></button>
+            </div>
+            <div class="modal-body" id="downloadModal-Content">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="downloadModal-History">更新历史</button>
+                <button type="button" class="btn btn-primary" id="downloadModal-Download">下载</button>
+            </div>
+        </div>
+    </div>
 </div>
 <header class="py-3 border-bottom navbar sticky-top" id="nav">
     <div class="container d-flex flex-wrap">
@@ -103,12 +115,12 @@
             <span class="fs-4">文乎</span>
             <h1 class="badge bg-primary">测试</h1>
         </a>
-        <button type="button" id="nav-top-get" class="btn btn-primary" style="margin-inline-start: 50px">获取</button>
+        <button type="button" id="nav-top-get" class="btn btn-primary" style="margin-inline-start: 50px" data-bs-toggle="modal" data-bs-target="#downloadModal">获取</button>
     </div>
 </header>
 <div class="progress" style="height: 25px; margin-inline: -5px">
     <div class="progress-bar progress-bar-striped progress-bar-animated"
-         style="width:24%; font-size: 15px; line-height: 16px;">
+         style="width:32%; font-size: 15px; line-height: 16px;">
     </div>
 </div>
 <div class="container_info">
@@ -126,7 +138,7 @@
                     style="width: 200px; height: 56px; font-size: 25px"><a href="#banner-title" style="color: unset">了解更多</a>
             </button>
             <button type="button" id="btn_getApk" class="btn btn-primary btn-lg"
-                    style="width: 200px; height: 56px; font-size: 25px">立即获取
+                    style="width: 200px; height: 56px; font-size: 25px" data-bs-toggle="modal" data-bs-target="#downloadModal">立即获取
             </button>
             <button type="button" id="btn_getNews" class="btn btn-success btn-lg"
                     style="width: 200px; height: 56px; font-size: 25px">最新动态
@@ -141,7 +153,8 @@
         <img id="rela-middle" class="screenshot-middle" alt="探索" src="/asset/screenshot/2.jpg">
         <img id="rela-right" class="screenshot-right" alt="消息" src="/asset/screenshot/3.jpg">
     </div>
-    <h5 class="display-5" id="banner-title">现代化</h5>
+    <br>
+    <h5 class="display-5" id><a class="section-title" id="banner-title">现代化</a></h5>
     <p style="font-size: 23px">原生开发的基础上提供更现代的设计</p>
 </div>
 <!--footer-->
@@ -218,44 +231,7 @@
     </div>
 </footer>
 <script>
-    mark();
-    progress();
-
-    function progress() {
-        let progress = document.querySelector(".progress-bar");
-        let progressWidth = progress.style.width;
-        progress.innerHTML = "进度：" + progressWidth;
-        if (progressWidth === "100%") {
-            progress.innerHTML = "构建完成";
-        }
-    }
-
-    function mark() {
-        let mark = document.querySelector("mark");
-        let strArray = ["舒适", "简洁", "现代", "轻量", "快速", "丰富", "优雅", "美观", "强大"];
-        let i = 0;
-        markChange(strArray[i]);
-
-        function markChange(str) {
-            let timer = setInterval(function () {
-                mark.innerHTML = str.substring(0, mark.innerHTML.length + 1);
-                if (mark.innerHTML.length === str.length) {
-                    clearInterval(timer)
-                    let timers = setInterval(function () {
-                        mark.innerHTML = mark.innerHTML.substring(0, mark.innerHTML.length - 1);
-                        if (mark.innerHTML.length === 0) {
-                            clearInterval(timers);
-                            i++;
-                            if (i === strArray.length) {
-                                i = 0;
-                            }
-                            markChange(strArray[i]);
-                        }
-                    }, 500);
-                }
-            }, 700);
-        }
-    }
+    mark(); progress(); download()
 </script>
 </body>
 </html>
